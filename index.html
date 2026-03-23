@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GR Yogananth - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">PORTFOLIO</a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="resume-btn" onclick="openResumeSelection()">
+                    <i class="fas fa-file-alt"></i> Resume
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container" id="page-container">
+        
+        <section id="home" class="section visible">
+            <div class="section-content">
+                <div class="hero-content">
+                    <div class="profile-img-container">
+                        <img src="assets/Photo.jpg" alt="GR Yogananth" class="profile-img">
+                    </div>
+                    <div class="hero-text">
+                        <h1>GR Yogananth</h1>
+                        <h2>IoT & Embedded Systems Engineer</h2>
+                        <p class="professional-summary">
+                            Passionate about <strong>Electronics, IoT and Embedded Systems</strong>. I thrive on hands-on projects, those
+                            involving electronic components and sensors. I'm always curious about how electronics can be used to create simple, smart
+                            solutions to real-world problems.
+                        </p>
+                        <div class="hero-socials">
+                            <a href="https://github.com/gr-yoga-20-12" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/yogananth-gr-4204b92ab" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:yogananthgr@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2 class="section-heading">About Me</h2>
+                <div class="content-block">
+                    <p>
+                        I'm an ECE Student with a passion for <strong>IoT and Embedded Systems</strong>. I thrive on hands-on projects, especially those involving electronic components and sensors.
+                        I enjoy building applications that are used to resolve real-world problems.
+                    </p>
+                    <p>
+                        My journey in core electronics began with a curiosity about how <strong>electronics, technologies 
+                        and sensors</strong> can be integrated to build smart solutions to real-world challenges.
+                    </p>                        
+                    <div class="skills-row">
+                        <div class="skill-category">
+                            <h4>Core Skills</h4>
+                            <p>Arduino IDE, Raspberry Pi, LTspice, MATLAB</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Soft Skills</h4>
+                            <p>Team Management, Communication, Time Management</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Language</h4>
+                            <p>C, C++, Embedded C, Python</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="section-content">
+                <h2 class="section-heading">Education</h2>
+                <div class="timeline-block">
+                    <div class="timeline-item">
+                        <div class="time">2023 - Present</div>
+                        <div class="details modal-trigger" data-modal="education-1">
+                            <h3>Bachelor of Engineering <i class="fas fa-external-link-alt title-icon"></i></h3>
+                            <span class="institution">Electronics and Communication Engineering</span>
+                            <span class="institution">Indian Institute of Information Technology Sri City</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2021 - 2023</div>
+                        <div class="details modal-trigger" data-modal="education-2">
+                            <h3>Higher Secondary <i class="fas fa-external-link-alt title-icon"></i></h3>
+                            <span class="institution">Intermediate (MPC Stream)</span>
+                            <span class="institution">Narayana Junior College, Nellore</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">2021</div>
+                        <div class="details modal-trigger" data-modal="education-3">
+                            <h3>Secondary Education <i class="fas fa-external-link-alt title-icon"></i></h3>
+                            <span class="institution">Class X (State Board)</span>
+                            <span class="institution">Narayana EM HS, Nellore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-content">
+                <h2 class="section-heading">Projects</h2>
+                <div class="grid-2-col">
+                    <div class="card modal-trigger" data-modal="project-1">
+                        <h3>Seat Belt Safety System <i class="fas fa-external-link-alt title-icon"></i></h3>
+                        <span class="badge">Hardware & IoT</span>
+                    </div>
+                    <div class="card modal-trigger" data-modal="project-2">
+                        <h3>IoT Street Light Control <i class="fas fa-external-link-alt title-icon"></i></h3>
+                        <span class="badge">ElectroForge Hackathon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="section-content">
+                <h2 class="section-heading">Experience</h2>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>Internship</h4>
+                        <span class="date">Jul 2025 - Aug 2025</span>
+                    </div>
+                    <p class="institution">Indian Institute of Information Technology Sri City, Chittoor</p>
+                    <p>
+                        Real-Time GPS Tracking System: Designed and implemented a GPS tracking system using Raspberry Pi and GPS HAT, 
+                        integrating real-time data logging and visualization with Google My Maps. 
+                        Alongside, conducted research on Multi-Sensor Fusion techniques for Vision and Sonar based Navigation Systems 
+                        for Autonomous Underwater Vehicles.
+                    </p>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>Undergraduate Researcher</h4>
+                        <span class="date">May 2025 - Present</span>
+                    </div>
+                    <p class="institution">Indian Institute of Information Technology Sri City, Chittoor</p>
+                    <p>
+                        A Real-time Navigation Framework for Autonomous Underwater Vehicles in Unknown Environments Based on Filtering and 
+                        Feature-Level fusion techniques.
+                    </p>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h4>Electronics Domain Member</h4>
+                        <span class="date">Sep 2024 - Present</span>
+                    </div>
+                    <p class="institution">Nexsync Club – Smart Mobility & Transportation</p>
+                    <p>
+                        Actively contributing to the electronics design and embedded system development for smart mobility solutions targeting real-world
+                        urban transportation challenges, in collaboration with multi-disciplinary teams emphasizing sustainability and innovation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2 class="section-heading">Contact</h2>
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <div class="info-row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Thalaivasal, Salem, Tamil Nadu</span>
+                        </div>
+                        <div class="info-row">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 6382651782</span>
+                        </div>
+                        <div class="info-row">
+                            <i class="fas fa-envelope"></i>
+                            <span>yogananthgr@gmail.com</span>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="simple-form">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <p id="form-status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 GR Yogananth. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <div class="modal-overlay" id="education-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Bachelor of Engineering</h3>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <span class="modal-subtitle">Electronics and Communication Engineering</span>
+                <div class="modal-grid">
+                    <div class="info-card"><span class="label">CGPA</span><span class="value">7.82</span></div>
+                    <div class="info-card"><span class="label">Location</span><span class="value">Sri City, India</span></div>
+                </div>
+                <p class="modal-desc">Currently pursuing my Bachelor's degree in Electronics and Communication Engineering at the prestigious Indian Institute of Information Technology Sri City. My academic journey focuses on cutting-edge technologies in embedded systems, IoT, and communication systems.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="education-2">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Higher Secondary</h3>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <span class="modal-subtitle">Intermediate (MPC Stream)</span>
+                <div class="modal-grid">
+                    <div class="info-card"><span class="label">Percentage</span><span class="value">96.2%</span></div>
+                    <div class="info-card"><span class="label">Stream</span><span class="value">Mathematics, Physics, Chemistry</span></div>
+                </div>
+                <p class="modal-desc">Completed my Higher Secondary Education at Narayana Junior College, Brahmadevam, Nellore.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="education-3">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Secondary Education</h3>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <span class="modal-subtitle">Class X (State Board)</span>
+                <div class="modal-grid">
+                    <div class="info-card"><span class="label">Percentage</span><span class="value">98.6%</span></div>
+                    <div class="info-card"><span class="label">Year</span><span class="value">2021</span></div>
+                </div>
+                <p class="modal-desc">Completed my Secondary Education at Narayana EM HS Pedarupalli, Nellore.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay paper-modal" id="project-1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="badge" style="margin:0;">Hardware & IoT</span>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="paper-title">Smart Seat Belt Safety System Framework</h2>
+                <div class="paper-authors">GR Yogananth, Indian Institute of Information Technology Sri City</div>
+                <div class="paper-abstract">
+                    <strong>Abstract</strong>
+                    This project presents a smart safety system combining hardware and IoT protocols to minimize vehicular collision injuries. The framework features automatic belt tightening and real-time collision detection, leveraging Bluetooth connectivity to transmit emergency alerts.
+                </div>
+                <div class="paper-section">
+                    <h4>1. Introduction</h4>
+                    <p>Conventional seatbelt systems rely entirely on mechanical locking mechanisms during high-impact scenarios. This project explores the integration of microcontrollers and real-time sensor data to preemptively secure passengers before an impact occurs, significantly reducing the risk of whiplash and severe trauma.</p>
+                </div>
+                <div class="paper-section">
+                    <h4>2. Methodology & Tech Stack</h4>
+                    <p>The system architecture is built upon a central microcontroller interfacing with accelerometers and impact sensors. When anomalous deceleration is detected, the system triggers automated actuators to retract the seatbelt.</p>
+                    <p><strong>Hardware used:</strong> Accelerometer (ADXL345), Bluetooth Module (HC-05), Servo Motors, and a primary Microcontroller unit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay paper-modal" id="project-2">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="badge" style="margin:0;">ElectroForge Hackathon</span>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="paper-title">IoT-Based Street Light Energy Optimization Control</h2>
+                <div class="paper-authors">GR Yogananth (Runner-up, ElectroForge Hackathon)</div>
+                <div class="paper-abstract">
+                    <strong>Abstract</strong>
+                    Urban energy consumption is heavily impacted by inefficient street lighting. This system proposes an automated, IoT-driven approach to street light management, utilizing LDR sensors for dynamic dimming and the Blynk app for remote administrative override, reducing idle power waste by up to 40%.
+                </div>
+                <div class="paper-section">
+                    <h4>1. Problem Statement</h4>
+                    <p>Traditional streetlights operate on fixed timers, leading to massive energy waste. A dynamic, responsive system is required for modern smart cities.</p>
+                </div>
+                <div class="paper-section">
+                    <h4>2. System Architecture</h4>
+                    <p>The core processing is handled by a NodeMCU ESP8266, which collects real-time luminosity data from distributed Light Dependent Resistors (LDR). The data is pushed to a cloud server via WiFi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="resume-choice-modal">
+        <div class="modal-content choice-box">
+            <div class="modal-header">
+                <h3>Resume Options</h3>
+                <button class="close-btn" onclick="closeResumeModals()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body resume-choice-body">
+                <p>How would you like to access the resume?</p>
+                <div class="resume-actions">
+                    <button class="submit-btn" onclick="openResumePreview()">
+                        <i class="fas fa-eye"></i> View Online
+                    </button>
+                    <a href="assets/resume.pdf" download="Yogananth_Resume.pdf" class="submit-btn alt-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="resume-preview-modal">
+        <div class="modal-content preview-box">
+            <div class="modal-header">
+                <h3>Resume Preview</h3>
+                <button class="close-btn" onclick="closeResumeModals()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body iframe-container">
+                <iframe src="assets/resume.pdf"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+:root {
+    /* OCEANS Light Marine Theme */
+    --bg-body: #ffffff;
+    --bg-nav: #ffffff;
+    --bg-card: #ffffff;
+    --bg-alt: #f1f6f9; /* Very light blue for subtle backgrounds */
+    
+    --text-primary: #154c79; /* OCEANS Deep Marine Blue */
+    --text-secondary: #4a6fa5; /* Lighter blue/grey */
+    --text-dark: #1e293b;
+    
+    --accent-primary: #0096c7; /* Cyan/Light Blue */
+    --accent-secondary: #0077b6;
+    --accent-light: #caf0f8; /* Pill background color */
+    
+    --border: #e0e6ed;
+    --nav-height: 75px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable; /* Keeps the scrollbar space reserved! */
+}
+
+body.no-scroll {
+    overflow: hidden; /* Freezes the background */
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==================== TOP NAVIGATION ==================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: var(--bg-nav);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent-primary); /* Pop of color at bottom */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.nav-brand {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--accent-primary);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.resume-btn {
+    background-color: var(--text-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.resume-btn:hover {
+    background-color: var(--accent-primary);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* ==================== PAGE LAYOUT ==================== */
+.page-container {
+    width: 100%;
+    padding-top: var(--nav-height); /* Offset for fixed nav */
+}
+
+.section {
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .section:nth-child(even) {
+    background-color: var(--bg-alt);
+} */
+
+.section-content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Sora', sans-serif;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+}
+
+/* ==================== HERO SECTION (Red Circle 1) ==================== */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 10%;
+    border: 4px solid var(--accent-primary);
+    padding: 5px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    font-family: 'Sora', sans-serif;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+/* Specifically styling the subtitle you circled in red */
+.hero-text h2 {
+    font-size: 1.4rem;
+    color: var(--accent-primary);
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.professional-summary {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hero-socials a {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.hero-socials a:hover {
+    color: var(--accent-primary);
+}
+
+/* ==================== CARDS & BADGES (Red Circle 3) ==================== */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px; /* Matched to Education */
+    border: 1px solid var(--border); /* Starts with standard grey border */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    border-color: var(--accent-primary); /* Turns crisp blue on hover */
+    /* Removed the heavy blue fuzzy shadow */
+}
+
+.card h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-family: 'Sora', sans-serif;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-icon {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Pill shaped badge exactly like the red circled image */
+.badge {
+    background-color: var(--accent-light);
+    color: var(--accent-secondary);
+    padding: 8px 20px;
+    font-size: 0.95rem;
+    border-radius: 30px; /* Pill shape */
+    display: inline-block;
+    font-weight: 600;
+}
+
+/* ==================== TIMELINE & EXPERIENCE ==================== */
+.timeline-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    border-left: 2px solid var(--border);
+    padding-left: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+}
+
+.timeline-item .time {
+    min-width: 120px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.timeline-item .details {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    flex: 1;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.timeline-item .details:hover {
+    border-color: var(--accent-primary);
+}
+
+.timeline-item .details h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.institution {
+    color: var(--text-secondary);
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.exp-item {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--text-primary);
+    margin-bottom: 25px;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.exp-header h4 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-family: 'Sora', sans-serif;
+}
+
+.exp-header .date {
+    background: var(--accent-light);
+    color: var(--accent-secondary);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ==================== MODALS (Fixed Overlay) ==================== */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Changed from dark blue to a clean, frosted white background */
+    background: rgba(255, 255, 255, 0.75); 
+    backdrop-filter: blur(5px);
+    z-index: 9999; /* Higher than EVERYTHING */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--bg-body);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-overlay.active .modal-content { transform: translateY(0); }
+
+.modal-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-alt);
+}
+
+.modal-header h3 {
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.close-btn {
+    background: rgba(0, 0, 0, 0.04); /* Very subtle grey circle inherently */
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem; 
+    color: var(--text-secondary);
+    cursor: pointer; 
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover { 
+    color: var(--accent-primary); 
+    background: rgba(0, 150, 199, 0.1); /* Light blue circle on hover */
+    transform: scale(1.05); /* Slight pop effect */
+}
+
+.modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+/* Specific Resume Preview Modal Fix */
+/* Specific Resume Preview Modal Fix */
+#resume-preview-modal .preview-box {
+    max-width: 900px; /* Wide enough for PDF */
+    height: 85vh; /* Fits within screen without scrolling body */
+    display: flex;
+    flex-direction: column;
+}
+
+#resume-preview-modal .iframe-container {
+    padding: 0;
+    flex-grow: 1;
+    height: 100%;
+    overflow: hidden; /* <--- THIS REMOVES THE OUTER SCROLLBAR */
+    max-height: none; /* Overrides the default modal max-height */
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block; /* Removes weird spacing under the iframe */
+}
+
+.resume-choice-body { text-align: center; }
+.resume-actions { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+
+/* ==================== BUTTONS & FORMS ==================== */
+.submit-btn {
+    background: var(--accent-primary);
+    color: white; border: none;
+    padding: 12px 25px; border-radius: 6px;
+    font-weight: 600; cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.3s;
+    text-decoration: none; /* Removes the underline from the link */
+    display: inline-block; /* Keeps the button sizing correct */
+}
+/* The .alt-btn line was removed here so they share the exact same color! */
+.submit-btn:hover { background: var(--text-primary); }
+
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.simple-form input, .simple-form textarea {
+    width: 100%; padding: 12px; margin-bottom: 20px;
+    border: 1px solid var(--border); border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+}
+.simple-form input:focus, .simple-form textarea:focus {
+    outline: none; border-color: var(--accent-primary);
+}
+
+footer {
+    text-align: center; padding: 30px;
+    background: var(--text-primary); color: white;
+}
+
+/* ==================== MOBILE RESPONSIVENESS ==================== */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        left: -100%;
+        width: 100%;
+        background: var(--bg-nav);
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.active { left: 0; }
+    .mobile-toggle { display: block; }
+    
+    .hero-content { flex-direction: column; text-align: center; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .grid-2-col, .contact-layout { grid-template-columns: 1fr; }
+    .timeline-item { flex-direction: column; gap: 10px; }
+    .exp-header { flex-direction: column; align-items: flex-start; gap: 5px; }
+}
