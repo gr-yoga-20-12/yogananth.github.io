@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>GR Yogananth - Portfolio</title>
-    <meta name="robots" content="noindex">
     <meta name="description" content="Personal portfolio of Yogananth, showcasing projects in embedded systems, IoT, and digital design.">
     <meta name="keywords" content="Yogananth, Portfolio, ECE, IoT, Embedded Systems, Developer">
     <meta name="author" content="Yogananth">
-    <meta name="google-site-verification" content="ZEWWA9hvkb7X5mXLTWfky4XNYA1V0XlfSeZukCCNEOk" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
@@ -133,12 +131,16 @@
                 <h2 class="section-heading">Projects</h2>
                 <div class="grid-2-col">
                     <div class="card modal-trigger" data-modal="project-1">
-                        <h3>Seat Belt Safety System <i class="fas fa-external-link-alt title-icon"></i></h3>
-                        <span class="badge">Hardware & IoT</span>
+                        <h3>Digital Twin for 2W EV <i class="fas fa-external-link-alt title-icon"></i></h3>
+                        <span class="badge">Unity & Data Modeling</span>
                     </div>
                     <div class="card modal-trigger" data-modal="project-2">
-                        <h3>IoT Street Light Control <i class="fas fa-external-link-alt title-icon"></i></h3>
-                        <span class="badge">ElectroForge Hackathon</span>
+                        <h3>Smart Traffic Management <i class="fas fa-external-link-alt title-icon"></i></h3>
+                        <span class="badge">LoRaWAN & IoT</span>
+                    </div>
+                    <div class="card modal-trigger" data-modal="project-3">
+                        <h3>Seat Belt Safety System <i class="fas fa-external-link-alt title-icon"></i></h3>
+                        <span class="badge">Embedded Systems & IoT</span>
                     </div>
                 </div>
             </div>
@@ -265,24 +267,23 @@
     <div class="modal-overlay paper-modal" id="project-1">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="badge" style="margin:0;">Hardware & IoT</span>
+                <span class="badge" style="margin:0;">Unity & Data Modeling</span>
                 <button class="close-btn"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
-                <h2 class="paper-title">Smart Seat Belt Safety System Framework</h2>
+                <h2 class="paper-title">Digital Twin for Two-Wheeler Electric Vehicle</h2>
                 <div class="paper-authors">GR Yogananth, Indian Institute of Information Technology Sri City</div>
                 <div class="paper-abstract">
                     <strong>Abstract</strong>
-                    This project presents a smart safety system combining hardware and IoT protocols to minimize vehicular collision injuries. The framework features automatic belt tightening and real-time collision detection, leveraging Bluetooth connectivity to transmit emergency alerts.
+                    Developing a digital twin model to simulate and monitor an electric vehicle across four operational domains over a fast-paced 2-week timeline. This framework bridges physical systems with virtual models to enhance operational monitoring.
                 </div>
                 <div class="paper-section">
-                    <h4>1. Introduction</h4>
-                    <p>Conventional seatbelt systems rely entirely on mechanical locking mechanisms during high-impact scenarios. This project explores the integration of microcontrollers and real-time sensor data to preemptively secure passengers before an impact occurs, significantly reducing the risk of whiplash and severe trauma.</p>
+                    <h4>1. Predictive Modeling</h4>
+                    <p>Implementing predictive data models trained on ~50,000 telemetry data points to forecast battery degradation and optimize range estimation, achieving 95% model accuracy.</p>
                 </div>
                 <div class="paper-section">
-                    <h4>2. Methodology & Tech Stack</h4>
-                    <p>The system architecture is built upon a central microcontroller interfacing with accelerometers and impact sensors. When anomalous deceleration is detected, the system triggers automated actuators to retract the seatbelt.</p>
-                    <p><strong>Hardware used:</strong> Accelerometer (ADXL345), Bluetooth Module (HC-05), Servo Motors, and a primary Microcontroller unit.</p>
+                    <h4>2. Virtual Environment</h4>
+                    <p>Designing a Unity-based virtual sensor environment to replicate physical sensor outputs, establishing a real-time visual counterpart for the physical EV.</p>
                 </div>
             </div>
         </div>
@@ -291,23 +292,48 @@
     <div class="modal-overlay paper-modal" id="project-2">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="badge" style="margin:0;">ElectroForge Hackathon</span>
+                <span class="badge" style="margin:0;">LoRaWAN & IoT</span>
                 <button class="close-btn"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
-                <h2 class="paper-title">IoT-Based Street Light Energy Optimization Control</h2>
-                <div class="paper-authors">GR Yogananth (Runner-up, ElectroForge Hackathon)</div>
+                <h2 class="paper-title">Smart Traffic Management System</h2>
+                <div class="paper-authors">GR Yogananth, Indian Institute of Information Technology Sri City</div>
                 <div class="paper-abstract">
                     <strong>Abstract</strong>
-                    Urban energy consumption is heavily impacted by inefficient street lighting. This system proposes an automated, IoT-driven approach to street light management, utilizing LDR sensors for dynamic dimming and the Blynk app for remote administrative override, reducing idle power waste by up to 40%.
+                    An IoT-enabled traffic monitoring system designed to provide intelligent, data-driven navigation assistance through a network of distributed sensor nodes.
                 </div>
                 <div class="paper-section">
-                    <h4>1. Problem Statement</h4>
-                    <p>Traditional streetlights operate on fixed timers, leading to massive energy waste. A dynamic, responsive system is required for modern smart cities.</p>
+                    <h4>1. Data Acquisition & Communication</h4>
+                    <p>Integrating sensor nodes to acquire data on traffic density and environmental parameters. The system utilizes LoRaWAN for communication to ensure wide, reliable coverage across the test zone.</p>
                 </div>
                 <div class="paper-section">
-                    <h4>2. System Architecture</h4>
-                    <p>The core processing is handled by a NodeMCU ESP8266, which collects real-time luminosity data from distributed Light Dependent Resistors (LDR). The data is pushed to a cloud server via WiFi.</p>
+                    <h4>2. Integration & Interface</h4>
+                    <p>Collaborated with AI/ML and web teams to deliver a user-friendly mobile interface, leveraging Raspberry Pi, ESP32, and deep database integration.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay paper-modal" id="project-3">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="badge" style="margin:0;">Embedded Systems & IoT</span>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="paper-title">Seat Belt Safety System</h2>
+                <div class="paper-authors">GR Yogananth, Indian Institute of Information Technology Sri City</div>
+                <div class="paper-abstract">
+                    <strong>Abstract</strong>
+                    A real-time collision detection and dynamic seat belt regulation system leveraging sensor fusion and serial communication to preemptively secure passengers and minimize injury risks.
+                </div>
+                <div class="paper-section">
+                    <h4>1. Collision Detection & Response</h4>
+                    <p>Integrated HC-SR04 ultrasonic (50-100 cm range) and SW-420 vibration sensors with threshold-triggering. Implemented a stepper motor retraction mechanism with an IR feedback loop to dynamically tighten the seat belt during dangerous scenarios.</p>
+                </div>
+                <div class="paper-section">
+                    <h4>2. Emergency Notification</h4>
+                    <p>Configured an HC-05 Bluetooth module via UART serial communication to transmit accident status to a paired mobile application within 5-10 seconds, automating emergency contact notifications.</p>
                 </div>
             </div>
         </div>
@@ -344,6 +370,29 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("yWscGvF9iH6lVn7A-"); // Your EmailJS Public Key
+       })();
+    </script>
+
     <script src="script.js"></script>
+
+    <div id="contact-success-modal" class="modal-overlay hidden">
+        <div class="modal-content contact-feedback-modal">
+            <button class="close-btn close-contact-feedback"><i class="fas fa-times"></i></button>
+            
+            <div class="feedback-icon success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <div class="feedback-content">
+                <h2 class="feedback-title success-text">Success</h2>
+                <p class="feedback-message">Your email has been sent successfully. Thank you for getting in touch!</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
