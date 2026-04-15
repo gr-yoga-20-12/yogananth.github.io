@@ -74,26 +74,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.section').forEach(section => observer.observe(section));
 
-    // --- 4. CONTACT FORM HANDLING ---
+   // --- 4. CONTACT FORM HANDLING (Static Hosting Ready) ---
     const contactForm = document.getElementById('contact-form');
     const statusMsg = document.getElementById('form-status');
-    
+    const successModal = document.getElementById('contact-success-modal');
+
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = contactForm.querySelector('.submit-btn');
             const originalText = btn.innerText;
             btn.innerText = 'Sending...';
             btn.disabled = true;
-            
-            setTimeout(() => {
-                statusMsg.style.color = 'var(--accent-primary)';
-                statusMsg.innerText = "✓ Message format ready (Backend required to send)";
-                btn.innerText = originalText;
-                btn.disabled = false;
-                contactForm.reset();
-                setTimeout(() => { statusMsg.innerText = ''; }, 5000);
-            }, 1000);
+            statusMsg.innerText = ''; 
+
+            // Send via EmailJS (Requires your Service ID and Template ID)
+            emailjs.sendForm('service_oogw4w1', 'template_20saj8p', this)
+                .then(function() {
+                    // Success! Show the popup modal
+                    if (successModal) {
+                        successModal.classList.remove('hidden');
+                        successModal.classList.add('active'); 
+                        document.body.classList.add('no-scroll');
+                    }
+                    contactForm.reset();
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                }, function(error) {
+                    // Failed
+                    console.error("EmailJS error:", error);
+                    statusMsg.style.color = 'red';
+                    statusMsg.innerText = "❌ Failed to send message. Please try again.";
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
+        });
+    }
+
+    // Handle closing the success modal
+    const closeSuccessBtn = document.querySelector('.close-contact-feedback');
+    if (closeSuccessBtn && successModal) {
+        closeSuccessBtn.addEventListener('click', () => {
+            successModal.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        });
+        
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
         });
     }
 
@@ -157,6 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.closeResumeModals = function() {
         document.getElementById('resume-choice-modal').classList.remove('active');
         document.getElementById('resume-preview-modal').classList.remove('active');
-        document.body.classList.remove('no-scroll'); 
+        document.body.classList.remove('no-scroll');
     }
 });
