@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             statusMsg.innerText = ''; 
 
             // Send via EmailJS (Requires your Service ID and Template ID)
-            emailjs.sendForm('service_oogw4w1', 'template_20saj8p', this)
+            emailjs.sendForm('service_oogw4w1', 'template_20saj8p', contactForm)
                 .then(function() {
                     // Success! Show the popup modal
                     if (successModal) {
